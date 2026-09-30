@@ -1,0 +1,259 @@
+/* ================================
+   Global Styles
+================================ */
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Prevent horizontal overflow */
+
+body {
+    overflow-x: hidden;
+}
+
+/* ================================
+   Navigation
+================================ */
+
+#navbar {
+    transition: all 0.3s ease;
+}
+
+/* Navigation links */
+
+.nav-link {
+    position: relative;
+}
+
+.nav-link::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+    width: 0;
+    height: 1px;
+    background: white;
+    transition: width 0.3s ease;
+}
+
+.nav-link:hover::after {
+    width: 100%;
+}
+
+
+/* ================================
+   Hero Section
+================================ */
+
+.hero-item {
+    opacity: 0;
+    transform: translateY(20px);
+    animation: heroFadeUp 0.8s ease forwards;
+}
+
+.hero-item:nth-child(1) {
+    animation-delay: 0.1s;
+}
+
+.hero-item:nth-child(2) {
+    animation-delay: 0.2s;
+}
+
+.hero-item:nth-child(3) {
+    animation-delay: 0.3s;
+}
+
+.hero-item:nth-child(4) {
+    animation-delay: 0.4s;
+}
+
+.hero-item:nth-child(5) {
+    animation-delay: 0.5s;
+}
+
+.hero-item:nth-child(6) {
+    animation-delay: 0.6s;
+}
+
+@keyframes heroFadeUp {
+
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+}
+
+
+/* ================================
+   Tech Badges
+================================ */
+
+.tech-badge {
+    padding: 8px 14px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 999px;
+
+    background: rgba(255, 255, 255, 0.03);
+
+    color: #9ca3af;
+
+    font-size: 14px;
+
+    transition:
+        background 0.3s ease,
+        color 0.3s ease,
+        border-color 0.3s ease;
+}
+
+.tech-badge:hover {
+    background: rgba(255, 255, 255, 0.08);
+    color: white;
+    border-color: rgba(255, 255, 255, 0.2);
+}
+
+
+/* ================================
+   Contact Section
+================================ */
+
+.form-group {
+    margin-bottom: 24px;
+}
+
+.form-group label {
+    display: block;
+
+    margin-bottom: 8px;
+
+    font-size: 13px;
+
+    color: #9ca3af;
+}
+
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+
+    box-sizing: border-box;
+
+    padding: 14px 16px;
+
+    border: 1px solid rgba(255, 255, 255, 0.1);
+
+    border-radius: 10px;
+
+    background: rgba(255, 255, 255, 0.03);
+
+    color: white;
+
+    font-size: 14px;
+
+    outline: none;
+
+    transition:
+        border-color 0.3s ease,
+        background 0.3s ease;
+}
+
+
+.form-group input::placeholder,
+.form-group textarea::placeholder {
+    color: #4b5563;
+}
+
+
+.form-group input:focus,
+.form-group textarea:focus {
+    border-color: rgba(255, 255, 255, 0.3);
+
+    background: rgba(255, 255, 255, 0.05);
+}
+
+
+.form-group textarea {
+    resize: vertical;
+
+    min-height: 150px;
+}
+
+
+/* Submit Button */
+
+.submit-btn {
+    width: 100%;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    padding: 14px 18px;
+
+    border: none;
+
+    border-radius: 10px;
+
+    background: white;
+
+    color: black;
+
+    font-size: 14px;
+
+    font-weight: 600;
+
+    cursor: pointer;
+
+    transition:
+        background 0.3s ease,
+        transform 0.3s ease;
+}
+
+
+.submit-btn:hover {
+    background: #e5e5e5;
+
+    transform: translateY(-2px);
+}
+
+
+/* Social Links */
+
+.social-link {
+    padding: 8px 14px;
+
+    border: 1px solid rgba(255, 255, 255, 0.08);
+
+    border-radius: 999px;
+
+    color: #9ca3af;
+
+    font-size: 13px;
+
+    transition:
+        color 0.3s ease,
+        background 0.3s ease,
+        border-color 0.3s ease;
+}
+
+
+.social-link:hover {
+    color: white;
+
+    background: rgba(255, 255, 255, 0.05);
+
+    border-color: rgba(255, 255, 255, 0.2);
+}
